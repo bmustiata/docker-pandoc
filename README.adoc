@@ -2,3 +2,5 @@
 
 A basic pandoc container for pandoc 1.x to generate correct rst content out of
 docbooks.
+
+Unfortunately pandoc v2.x generates RST content that PYPI can't ingest.
