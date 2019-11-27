@@ -1,14 +1,6 @@
-import adhesive
-
-from adhesive import scm
-from adhesive.workspace import docker
+import germanium_docker
 
 
-@adhesive.task('Build docker image')
-def build_docker_image(context):
-    scm.checkout(context.workspace)
-    docker.build(context.workspace,
-                 "bmst/pandoc")
-
-
-adhesive.build()
+germanium_docker.pipeline({
+    ".": "bmst/pandoc"
+})
